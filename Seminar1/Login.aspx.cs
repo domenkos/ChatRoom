@@ -19,6 +19,7 @@ namespace Seminar1
                 uporabniki.Add("murkod", "Geslo.Programmer");
                 uporabniki.Add("admin", "Geslo.Admin");
                 Application["vsi"] = uporabniki;
+                Application["vsi_prijavljeni"] = new HashSet<String>();
             }
 
         }
@@ -53,7 +54,11 @@ namespace Seminar1
                 {
                     if (uporabniki[user].Equals(pw))
                     {
-                        Response.Redirect("Chat.aspx?" + user);
+                        Session["vpisaniup"] = user;
+                        HashSet<String> pom = (HashSet<String>)Application["vsi_prijavljeni"];
+                        pom.Add(user);
+                        Application["vsi_prijavljeni"] = pom;
+                        Response.Redirect("Chat.aspx?");
                     }
                     else
                         error.Text = "Ne ujema se uporabnisko ime in geslo";
