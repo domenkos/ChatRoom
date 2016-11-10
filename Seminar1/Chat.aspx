@@ -32,6 +32,7 @@
                     <asp:ListBox ID="Users" runat="server" Height="326px" Width="215px" OnSelectedIndexChanged="Users_SelectedIndexChanged"></asp:ListBox></td>
             </tr>
             <tr>
+                
                 <td class="auto-style2">
                     Vnos sporocil
                 </td>

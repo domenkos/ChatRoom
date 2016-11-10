@@ -24,7 +24,7 @@
           
         </p>
         <p style="margin-left: 160px">
-            <asp:Label ID="error" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="error" runat="server" Text=""></asp:Label>
         </p>
     </form>
 </body>

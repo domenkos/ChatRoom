@@ -16,10 +16,11 @@ namespace Seminar1
             {
                 Hashtable uporabniki = new Hashtable();
                 uporabniki.Add("63150154", "Geslo.Student");
-                uporabniki.Add("murkod", "Geslo.Programmer");
+                uporabniki.Add("murkod", "Geslo.Programer");
                 uporabniki.Add("admin", "Geslo.Admin");
                 Application["vsi"] = uporabniki;
-                Application["vsi_prijavljeni"] = new HashSet<String>();
+                var trenutni = new HashSet<String>();
+                Application["vsi_prijavljeni"] = trenutni;
             }
 
         }
@@ -55,9 +56,9 @@ namespace Seminar1
                     if (uporabniki[user].Equals(pw))
                     {
                         Session["vpisaniup"] = user;
-                        HashSet<String> pom = (HashSet<String>)Application["vsi_prijavljeni"];
-                        pom.Add(user);
-                        Application["vsi_prijavljeni"] = pom;
+                        HashSet<String> trenutni = (HashSet < String > )Application["vsi_prijavljeni"];
+                        trenutni.Add(user);
+                        Application["vsi_prijavljeni"] = trenutni;
                         Response.Redirect("Chat.aspx?");
                     }
                     else
