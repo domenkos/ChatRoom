@@ -34,7 +34,7 @@ namespace Seminar1
                 imena.Add("admin", "Slavoj Žužek");
                 Application["names"] = imena;
                 string vpisani_uporabnik = (string)imena[(string)Session["vpisaniup"]];
-                CurrentUser.Text = "Prijavljeni ste kot: " + vpisani_uporabnik;
+                CurrentUser.Text = vpisani_uporabnik;
                 osvezi();
             }
             if (Application["sporocila"] == null)

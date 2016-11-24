@@ -19,7 +19,8 @@
         <table>
             <tr>
                 <td class="auto-style1">
-                    <asp:Label ID="CurrentUser" runat="server" Text=" Prijavljeni ste kot:"></asp:Label>
+                    <asp:Label ID="Prijavljeni" runat="server" Text=" Prijavljeni ste kot:"></asp:Label>
+                    <asp:Label ID="CurrentUser" runat="server" ClientIDMode="AutoID"></asp:Label>
                 </td>
                 <td>
                     <asp:Button ID="Logout" runat="server" Text="Odjava" style="margin-left: 12px" Width="180px" OnClick="Logout_Click" />
